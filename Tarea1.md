@@ -69,7 +69,7 @@ Herencia es el pasarse los valores de una clase hacia otra y asi poder utilizars
 
   y no conosco ninguna empresa.
 
-2. **Escribe una propuesta de una máquina que venda distintos artículos y haz el diagrama de clases del sistema que propones. **
+2. **Escribe una propuesta de una máquina que venda distintos artículos y haz el diagrama de clases del sistema que propones.**
 
 ![Propuesta](./Imagenes/Propuesta.jpg)
 
