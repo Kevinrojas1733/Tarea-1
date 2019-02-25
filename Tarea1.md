@@ -3,10 +3,10 @@
 POO
 Con tus palabras, pero investigando define los siguientes conceptos:
 
-1. Paradígma: Es una técnica que se tiene para poder resolver los problemas que se vayan presentando al programar,  consiste en la unión de objetos, que son esos objetos y saber con que otros mas puede interactuar a su vez.
+1. **Paradígma**: Es una técnica que se tiene para poder resolver los problemas que se vayan presentando al programar,  consiste en la unión de objetos, que son esos objetos y saber con que otros mas puede interactuar a su vez.
 
 
-2. Abstracción, da dos ejemplos.
+2. **Abstracción**, da dos ejemplos.
 
 Son las características mas generales  que tiene un objeto en una clase sin meterse tan a fondo en la explicación.
 
@@ -17,10 +17,10 @@ Ejemplo 2: de igual manera al buscar en la clase bicicleta, vemos que todas tien
 Color, marca , etc.
 
 
-3. ¿Por qué decimos que la Clase es el mecanismo de abstracción de los lenguajes OO? 
+3. **¿Por qué decimos que la Clase es el mecanismo de abstracción de los lenguajes OO?**
  Porque al crear la clase tendremos informacion en forma de parámetros que viene siendo la informacion y las caracteristicas generales de un objeto.
 
-4. Explica el concepto de encapsulamiento, busca dos imágenes que te ayuden a describir el concepto, una que tenga algún sistema sin encapsulamiento y otra donde si lo tenga. Menciona por que es importante y que problemas puede evitar.  
+4. **Explica el concepto de encapsulamiento, busca dos imágenes que te ayuden a describir el concepto, una que tenga algún sistema sin encapsulamiento y otra donde si lo tenga. Menciona por que es importante y que problemas puede evitar.** 
 
 El encapsulamiento viene siendo el aislar los datos para que solo sean visibles para el creador y que sea a prueba de cambios de el usuario y que solamente se puedan hacer los cambios mediante los métodos asociados.
 Gracias a esto se pueden evitar problemas como que descomponga el programa o borre cosas que no deben ser borradas, un ejemplo son las televisiones, estan en el concepto de encapsulamiento ya que nosotros los usuarios solo vemos una pantalla y botones y solo se puede manipular con los *métodos* que ellos nos permiten, en cambio si no estuviera encapsulada veriamos todos los componentes y podriamos hacer cambios que harian que quizá se descomponga la televisión.
@@ -34,7 +34,7 @@ Gracias a esto se pueden evitar problemas como que descomponga el programa o bor
 
 
 
-5. Describe con tus palabras el concepto de herencia e ilustra el concepto con imágenes.
+5. **Describe con tus palabras el concepto de herencia e ilustra el concepto con imágenes.**
 
 Herencia es el pasarse los valores de una clase hacia otra y asi poder utilizarse en diferentes métodos.
 
@@ -43,7 +43,7 @@ Herencia es el pasarse los valores de una clase hacia otra y asi poder utilizars
 
 
 
-   1. Investiga la historia y haz un resumen del Lenguaje de Modelado Unificado, donde se mencione: quienes son sus principales autores (Booch, Rumbaugh, Jacobson), en que tipo de sistemas se utiliza, en particular el Diagrama de Clases. Menciona algunas de las herramientas para el modelado en UML. ¿Sabes de alguna empresa local que utilice este lenguaje?
+   1. **Investiga la historia y haz un resumen del Lenguaje de Modelado Unificado, donde se mencione: quienes son sus principales autores (Booch, Rumbaugh, Jacobson), en que tipo de sistemas se utiliza, en particular el Diagrama de Clases. Menciona algunas de las herramientas para el modelado en UML. ¿Sabes de alguna empresa local que utilice este lenguaje?**
 
    **Grady Booch** 27 de febrero de 1955 es un diseñador de software, un metodologista de software y entusiasta del diseño de patrones. Es director científico de Rational Software (ahora parte de IBM) y editor de una serie de Benjamin/Cummings. En 1995 se recibió como miembro de la Asociación de Maquinaria Computacional (ACM). Fue nombrado socio de IBM en 2003.
 
@@ -67,5 +67,12 @@ Herencia es el pasarse los valores de una clase hacia otra y asi poder utilizars
   Implantación de sistema
   Flexibilidad para admitir cambios no previstos durante el diseño o el rediseño
 
-2. Escribe una propuesta de una máquina que venda distintos artículos y haz el diagrama de clases del sistema que propones. 
+  y no conosco ninguna empresa.
 
+2. **Escribe una propuesta de una máquina que venda distintos artículos y haz el diagrama de clases del sistema que propones. **
+
+![Propuesta](./Imagenes/Propuesta.jpg)
+
+Rojas Garcia Kevin Argenis #18212263
+Programación orientada a objetos
+Profesor Mariosky
