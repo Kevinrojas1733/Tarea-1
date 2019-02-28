@@ -151,3 +151,69 @@ ademas se utiliza para evitar ambiguedad entre la clase y el constructor.
 Los constructores se pueden marcar como public, private, protected, internal o protectedinternal
 esto solamente indica de que manera se puede construir la clase, tambien se pueden declarar como estaticos 
 
+
+
+
+**2.7 Sobrecarga de operadores: Concepto y utilidad, operadores unarios y binarios.**
+
+
+
+
+      using System;
+      using System.Collections.Generic;
+      using System.Linq;
+      using System.Text;
+      using System.Threading.Tasks;
+
+      namespace Tarea2
+    {
+
+    class Dado
+      {
+        //Atributos 
+        private string color;
+        private int valor;
+        
+
+        //Constructor
+        public Dado(int valor, string color)
+        {
+            this.valor = valor;
+            this.color = color;
+        }
+
+        //metodo
+        public void imprime()
+        {
+            Console.WriteLine("los dados son: {0},{1}", valor, color);
+        }
+
+
+
+
+        class Program
+        {
+            static void Main(string[] args)
+            {
+                Random random = new Random();
+
+                Dado dado = new Dado(random.Next(1, 6), ("Morado"));
+                Dado dado2 = new Dado(random.Next(1, 6), ("Rojo"));
+                Dado dado3 = new Dado(random.Next(1, 6), ("Verde"));
+                
+
+
+
+               
+
+
+                dado.imprime();
+                dado2.imprime();
+                dado3.imprime();
+
+
+                Console.ReadKey();
+            }
+         }
+      }
+    
