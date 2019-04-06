@@ -29,137 +29,141 @@ NO se puede hacer herencia multiple en C#.
 Explica para que nos sirve la palabra base
  Haz el método Dibuja() que sea virtual y redefinelo en solo una de las clases derivadas.** 
 
-      using System;
-      using System.Collections.Generic;
+     using System;
+     using System.Collections.Generic;
 
-       namespace Figura2
-    {
-              class Vector2d
+      namespace Figura2
+     {
+    class Vector2d
     {
         public int x, y;
         public Vector2d(int x, int y)
         {
-            this.x=x; this.y=y;
+            this.x = x; this.y = y;
         }
         public override string ToString()
         {
             return String.Format("{0},{1}", x, y);
         }
     }
-     class Figura
+    class Figura
     {
         public Vector2d position;
-        public string fill ,border;
+        public string fill, border;
 
-          //Constructor por defecto 
-        public Figura():this( new Vector2d(100, 100))
+        //Constructor por defecto 
+        public Figura() : this(new Vector2d(100, 100))
         {
-        
+
         }
         //constructor de figura
         public Figura(Vector2d pos)
         {
-            position= pos;
-            fill= "white";
-            border= "black";
+            position = pos;
+            fill = "white";
+            border = "black";
         }
+
+        public virtual void Dibuja()
+        {
             
-        public virtual void Dibuja();
+        }
+
     }
 
     class Circulo : Figura
     {
-     private int radio;
-     public Circulo(Vector2d pos, int radio):base(pos)
-     {
-         this.radio= radio;
-     }
-     public Circulo ():base()
-     {
-         this.radio= 10;
-     }
+        private int radio;
+        public Circulo(Vector2d pos, int radio) : base(pos)
+        {
+            this.radio = radio;
+        }
+        public Circulo() : base()
+        {
+            this.radio = 10;
+        }
 
-     public override void Dibuja() 
-     {
-         Console.WriteLine("Se dibuja un circulo en {0} de color {1}", position, fill);
-     }
+        public override void Dibuja()
+        {
+            Console.WriteLine("Se dibuja un circulo en {0} de color {1}", position, fill);
+        }
     }
- 
+
     class Rectangulo : Figura
     {
-     
-     public Rectangulo(Vector2d pos):base(pos)
-     {
-         
-     }
-     public Rectangulo ():base()
-     {
-        
-     }
 
-     public new void Dibuja() 
-     {
-         Console.WriteLine("Se dibuja un Rectangulo en {0} de color {1}", position, fill);
-     }
-    } 
+        public Rectangulo(Vector2d pos) : base(pos)
+        {
 
-     class Cuadrado : Figura
-     {
-     
-     public Cuadrado(Vector2d pos):base(pos)
-    {
-         
-     }
-     public Cuadrado ():base()
-     {
-        
-     }
+        }
+        public Rectangulo() : base()
+        {
 
-     public new void Dibuja() 
-       {
-         Console.WriteLine("Se dibuja un Cuadrado en {0} de color {1}", position, fill);
-       }
+        }
+
+        public override void Dibuja()
+        {
+            Console.WriteLine("Se dibuja un Rectangulo en {0} de color {1}", position, fill);
+        }
     }
 
-     class Rombo : Figura
-     {
-     
-     public Rombo(Vector2d pos):base(pos)
+    class Cuadrado : Figura
     {
-         
-     }
-     public Rombo ():base()
-     {
-        
-     }
 
-     public new void Dibuja() 
-       {
-         Console.WriteLine("Se dibuja un Rombo en {0} de color {1}", position, fill);
-       }
+        public Cuadrado(Vector2d pos) : base(pos)
+        {
+
+        }
+        public Cuadrado() : base()
+        {
+
+        }
+
+        public override void Dibuja()
+        {
+            Console.WriteLine("Se dibuja un Cuadrado en {0} de color {1}", position, fill);
+        }
     }
-    
+
+    class Rombo : Figura
+    {
+
+        public Rombo(Vector2d pos) : base(pos)
+        {
+
+        }
+        public Rombo() : base()
+        {
+
+        }
+
+        public override void Dibuja()
+        {
+            Console.WriteLine("Se dibuja un Rombo en {0} de color {1}", position, fill);
+        }
+    }
+
 
 
 
 
     class Program
-     {
+    {
         static void Main(string[] args)
         {
 
             List<Figura> figuras = new List<Figura>();
             figuras.Add(new Circulo());
-            figuras.Add(new Rectangulo(new Vector2d(200,200));
-            figuras.Add(new Cuadrado(new Vector2d(300,300)));
-            figuras.Add(new Rombo(new Vector2d(400,400)));
-            foreach(Figura f in figuras)
-            f.Dibuja();
-           
-        }
-     }
-    }
+            figuras.Add(new Rectangulo(new Vector2d(200, 200)));
+            figuras.Add(new Cuadrado(new Vector2d(300, 300)));
+            figuras.Add(new Rombo(new Vector2d(400, 400)));
+            foreach (Figura f in figuras)
+                f.Dibuja();
 
+            Console.ReadKey();
+        }
+    }
+}
 
 
 
@@ -168,5 +172,5 @@ La palabra base sirve para hacer referencia a que la clase derivada va a heredar
 
 
 **NOTA**
-Los constructores ya estan sobrecargados y dibuja hecho virtual redefiniendo solo una con override y creando las otras con el new
+Los constructores ya estan sobrecargados y dibuja hecho virtual redefiniendolas con override.
 
