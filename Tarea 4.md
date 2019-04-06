@@ -95,6 +95,185 @@ using System;
 **2.1. Completa el programa.**
 **Aqui está el programa terminado**
              
+             
+             using System;
+using System.Collections.Generic;
+
+
+
+          
+
+
+
+    
+    
+
+       abstract class Musico 
+
+    {
+
+        public string nombre;
+   
+        public Musico(string n)
+
+        {
+
+            nombre = n;
+
+        }
+
+           public virtual void Afina()
+        {
+
+            Console.WriteLine("  Está afinado");
+        }
+       
+
+    }
+
+    class Bajista : Musico
+
+    {
+
+        public string instrumento;
+
+        public Bajista(string n, string i) : base(n)
+        {
+
+         instrumento=i;
+        }
+
+
+        public override void Afina()
+
+        {
+
+        Console.WriteLine("El bajista  está afinado");
+        }
+
+           public override string ToString ()
+           {
+            return string.Format("Nombre : {0},{1} ", nombre,instrumento);
+           }
+    }
+
+   class Guitarrista : Musico
+
+   {
+
+        public string instrumento;
+     public Guitarrista(string n, string i): base (n)
+        {
+            instrumento = i;
+        }
+
+        public virtual new void Afina()
+
+        {
+
+            Console.WriteLine("El guitarrista  está afinado");
+
+   
+
+        }
+
+        public override string ToString()
+        {
+            return string.Format("Nombre : {0},{1} ", nombre, instrumento);
+        }
+
+
+    }
+
+
+
+    class Program
+
+    {
+
+         static void Main()
+
+    {
+
+       
+
+        Bajista b = new Bajista("Flea","bajista");
+
+        Guitarrista g = new Guitarrista("Santana","Guitarrista");
+
+            List<Musico> musicos = new List<Musico>();
+
+            musicos.Add(b);
+            musicos.Add(g);
+            
+
+
+           
+
+
+
+            foreach (Musico x in musicos)
+            {
+                
+               
+
+               Console.WriteLine(x);
+            }
+
+
+            // (m as IAfina).Afina()
+
+            Console.ReadKey();
+
+
+
+    }
+
+    }
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
              using System;
            using System.Collections.Generic;
 
@@ -271,4 +450,148 @@ Alguno podria no implementarlo si esta virtual, si esta abstracto debe ser en to
 
 
 **3.Implementa el programa utilizando interfaces en lugar de herencia.**
-Ya esta el programa hecho por interfaces arriba.
+  using System;
+           using System.Collections.Generic;
+
+
+
+          
+
+
+
+    
+    interface IAfina
+    {
+    
+    void Afina();
+    }
+
+    class Musico : IAfina
+
+    {
+
+        public string nombre;
+   
+        public Musico(string n)
+
+        {
+
+            nombre = n;
+
+        }
+
+    public void Afina()
+        {
+
+            Console.WriteLine("  Está afinado");
+        }
+        public  override string ToString ()
+
+        {
+
+         return string.Format("Nombre : {0}", nombre);
+
+        }
+
+    }
+
+    class Bajista : Musico,IAfina
+
+    {
+
+        public string instrumento;
+
+        public Bajista(string n, string i) : base(n)
+        {
+
+         instrumento=i;
+        }
+
+
+        public virtual new void Afina()
+
+        {
+
+        Console.WriteLine("El bajista  está afinado");
+        }
+
+           public override string ToString ()
+           {
+            return string.Format("Nombre : {0},{1} ", nombre,instrumento);
+           }
+    }
+
+       class Guitarrista : Musico,IAfina
+
+       {
+
+        public string instrumento;
+     public Guitarrista(string n, string i): base (n)
+        {
+            instrumento = i;
+        }
+
+        public virtual new void Afina()
+
+        {
+
+            Console.WriteLine("El guitarrista  está afinado");
+
+
+
+        }
+
+        public override string ToString()
+        {
+            return string.Format("Nombre : {0},{1} ", nombre, instrumento);
+        }
+
+
+    }
+
+
+
+    class Program
+
+    {
+
+         static void Main()
+
+    {
+
+        Musico m = new Musico("Django"); 
+
+        Bajista b = new Bajista("Flea","bajista");
+
+        Guitarrista g = new Guitarrista("Santana","Guitarrista");
+
+            List<Musico> musicos = new List<Musico>();
+
+            musicos.Add(b);
+            musicos.Add(g);
+            musicos.Add(m);
+
+
+           
+
+
+
+            foreach (Musico x in musicos)
+            {
+                (b as IAfina).Afina();
+                (g as IAfina).Afina();
+                (m as Musico).Afina();
+
+               Console.WriteLine(x);
+            }
+
+
+            // (m as IAfina).Afina()
+
+            Console.ReadKey();
+
+
+
+    }
+
+    }
