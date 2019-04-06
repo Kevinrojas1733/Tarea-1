@@ -252,16 +252,13 @@ Alguno podria no implementarlo si esta virtual, si esta abstracto debe ser en to
 
 
 **3.Implementa el programa utilizando interfaces en lugar de herencia.**
-  using System;
+  
+  
+  
+           using System;
            using System.Collections.Generic;
 
 
-
-          
-
-
-
-    
     interface IAfina
     {
     
